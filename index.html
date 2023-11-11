@@ -5,108 +5,118 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Test</title>
         <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="stylesheet" href="assets/css/main.css">
         <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
     </head>
-    <body style="background-color: hsl(174, 100%, 99%);">
-        <div class="max-w-sm mx-auto w-full flex items-center justify-center shadow-lg lg:overflow-hidden" style="font-family: 'Courgette'; color: #D5AA60" data-aos="zoom-in-up">
-            <img src="assets/img/bg_primary_1.jpg" class="w-full">
-            <div class="flex flex-col items-center absolute max-w-xs w-full px-7">
-                <p class="mb-6">WALIMATULURUS</p>
-                <h1 class="text-4xl design-text-primary mb-1">{groom_alias}</h1>
-                <p>&amp;</p>
-                <h1 class="text-4xl design-text-primary">{bride_alias}</h1>
-                <h3 class="mt-6 text-xl">{date}</h3>
-                <h4 class="mb-6">{muslim_date}</h4>
-                <h3 class="text-xl text-center">{venue}</h3>
-            </div>
-        </div>
-        <div class="max-w-sm mx-auto bg-white w-full flex items-center flex-col text-center shadow-lg px-4 g:overflow-hidden" style="font-family: 'Courgette';" data-aos="zoom-in-up">
-            <svg class="w-full h-[20px] mt-16 mb-8"><use href="assets/img/divider.svg#divider-1"></use></svg>
-            <div class="pt-7">
-                <p class="mb-6">Assalamualaikum w.b.t</p>
-                <h2 class="text-xl design-text-primary">{father}</h2>
-                <p>&amp;</p>
-                <h2 class="text-xl design-text-primary">{mother}</h2>
-                <p class="my-4 text-sm">
-                    DENGAN SEGALA HORMATNYA MEMPERSILAKAN Y.B. / Y.BHG. TAN SRI / PUAN SRI /
-                    DATUK / DATO’/ DATIN / TUAN / PUAN / SAUDARA / SAUDARI KE MAJLIS
-                    PERKAHWINAN
-                </p>
-                <h2 class="text-xl design-text-primary">{groom}</h2>
-                <p>&amp;</p>
-                <h2 class="text-xl design-text-primary">{bride}</h2>
-                <div class="mt-12 flex flex-col">
-                    <h6 class="font-bold">TEMPAT</h6>
-                    <p class="mb-4">
-                        {address}
-                    </p>
-                    <h6 class="font-bold">TARIKH</h6>
-                    <p class="mb-4">{date}</p>
-                    <h6 class="font-bold">MASA</h6>
-                    <p class="mb-4">{time}</p>
+    <body>
+        <div class="main max-w-md mx-auto w-full shadow-lg lg:overflow-hidden">
+            <div class="flex items-center justify-center relative">
+                <div class="absolute h-full" id="particles-js"></div>
+                <img src="assets/img/bg_primary.jpg" class="w-full">
+                <div class="flex flex-col items-center absolute max-w-xs w-full px-7">
+                    
+                    <p class="cinzel mb-6">WALIMATULURUS</p>
+                    <h1 class="text-6xl tangerine mb-1">{groom_alias}</h1>
+                    <h1 class="text-6xl tangerine">&amp;</p>
+                    <h1 class="text-6xl tangerine">{bride_alias}</h1>
+
+                    <h3 class="cinzel mt-6 text-xl">{date}</h3>
+                    <h4 class="cinzel mb-6">{muslim_date}</h4>
+                    <h3 class="cinzel text-xl text-center">{venue}</h3>
                 </div>
             </div>
-            <svg class="w-full h-[20px] mt-16 mb-8"><use href="assets/img/divider.svg#divider-1"></use></svg>
+
+            <div class="flex items-center flex-col text-center px-4">
+                
+                <svg class="w-full h-[20px] mt-16 mb-8"><use href="assets/img/divider.svg#divider-1"></use></svg>
+                <div class="pt-7">
+                    <p class="mb-6" data-aos="fade-up">
+                        ASSALAMUALAIKUM WBT & SALAM SEJAHTERA
+                    </p>
+
+                    <div class="text-2xl cinzel" data-aos="fade-up">
+                        <p>{father}</p>
+                        <p>&</p>
+                        <p>{mother}</p>
+                    </div>
+                    
+                    <p class="my-4 text-sm" data-aos="fade-up">
+                        DENGAN SEGALA HORMATNYA MEMPERSILAKAN Y.B. / Y.BHG. TAN SRI / PUAN SRI /
+                        DATUK / DATO’/ DATIN / TUAN / PUAN / SAUDARA / SAUDARI KE MAJLIS
+                        PERKAHWINAN
+                    </p>
+
+                    <div class="text-2xl cinzel" data-aos="fade-up" data-aos-duration="1000">
+                        <p>{groom}</p>
+                        <p>&</p>
+                        <p>{bride}</p>
+                    </div>
+
+                    <div class="mt-12 flex flex-col" data-aos="fade-up" data-aos-duration="1000">
+                        <h6 class="font-bold text-[#be822b]">Tempat</h6>
+                        <p class="mb-6">{address}</p>
+
+                        <h6 class="font-bold text-[#be822b]">Tarikh</h6>
+                        <p class="mb-6">{date}</p>
+
+                        <h6 class="font-bold text-[#be822b]">Masa</h6>
+                        <p class="mb-6">{time}</p>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-duration="1000">
+                        <h6 class="font-bold text-[#be822b] mb-2">Aturcara Majlis</h6>
+                        <table class="m-auto">
+                            <tr>
+                                <td class="text-right font-bold">10:00</td>
+                                <td class="text-left pl-8">Sambut Tetamu</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right font-bold">12:30</td>
+                                <td class="text-left pl-8">Makan Beradap</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right font-bold">18:30</td>
+                                <td class="text-left pl-8">Tamat</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <svg class="w-full h-[20px] mt-16 mb-8"><use href="assets/img/divider.svg#divider-1"></use></svg>
+            </div>
+
+            <div class="flex items-center justify-center relative" data-aos="fade-up" data-aos-duration="1000">
+                <div class="absolute w-[80%] text-center cormorant">
+                    <p class="text-md mt-3 mb-6">
+                        "Ya Allah Yang Maha Mencipta, Jadikanlah majlis ini majlis yang mendapat
+                        keberkatan dan keredhaanMu, kekalkanlah ikatan perkahwinan mereka
+                        sepanjang hayat, tetapkanlah kasih sayang antara mereka selagi tidak
+                        melebihi kasih padaMu."
+                    </p>
+                    <p class="text-md">Aamin, Ya Rabbal A'lamin</p>
+                </div>
+                <img src="assets/img/bg_prayer.png" class="w-full py-8">
+            </div>
+
+            <div class="flex items-center flex-col text-center px-4" >
+                <svg class="w-full h-[20px] mt-16 mb-8"><use href="assets/img/divider.svg#divider-1"></use></svg>
+                <div class="pt-7" data-aos="fade-up" data-aos-duration="1000">
+                    <h2 class="cinzel text-xl mb-12">COUNTDOWN</h2>
+                    <div class="text-center" id="countdown-block">MAJLIS TELAH BERLANGSUNG</div>
+                </div>
+                <svg class="w-full h-[20px] mt-16 mb-8"><use href="assets/img/divider.svg#divider-1"></use></svg>
+            </div>
+
+            <div class="flex items-center flex-col text-center px-4">
+                <div class="pt-7" data-aos="fade-up" data-aos-duration="1000">
+                    <h2 class="cinzel text-xl mb-12">GALLERY</h2>
+                    <div class="text-center">{gallery}</div>
+                </div>
+                <svg class="w-full h-[20px] mt-16 mb-8"><use href="assets/img/divider.svg#divider-1"></use></svg>
+            </div>
         </div>
 
-        <div class="max-w-sm mx-auto bg-white w-full flex items-center flex-col text-center shadow-lg px-4 lg:overflow-hidden" style="font-family: 'Courgette';" data-aos="zoom-in-up">
-            <div class="pt-7">
-                <h2 class="text-xl mb-12">ATURCARA</h2>
-                <table class="table table-borderless" style="color: #D5AA60; width: fit-content ;margin: 0 auto;">
-                    <tbody>
-                        <tr>
-                            <td class="text-right pb-8">10:00</td>
-                            <td class="pl-8 pb-8">Sambut Tetamu</td>
-                        </tr>
-                        <tr>
-                            <td class="text-right pb-8">12:30</td>
-                            <td class="pl-8 pb-8">Makan Beradap</td>
-                        </tr>
-                        <tr>
-                            <td class="text-right">18:30</td>
-                            <td class="pl-8">Tamat</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <svg class="w-full h-[20px] mt-16 mb-8"><use href="assets/img/divider.svg#divider-1"></use></svg>
-        </div>
-        <div class="max-w-sm mx-auto bg-white w-full flex items-center justify-center shadow-lg lg:overflow-hidden" style="font-family: 'Courgette';" data-aos="zoom-in-up">
-            <div class="absolute w-[80%] text-center">
-                <p class="text-sm mt-3 mb-6">
-                    "Ya Allah Yang Maha Mencipta, Jadikanlah majlis ini majlis yang mendapat
-                    keberkatan dan keredhaanMu, kekalkanlah ikatan perkahwinan mereka
-                    sepanjang hayat, tetapkanlah kasih sayang antara mereka selagi tidak
-                    melebihi kasih padaMu."
-                </p>
-                <p class="text-sm">Aamin, Ya Rabbal A'lamin</p>
-            </div>
-            <img src="assets/img/bg_prayer.png" class="w-full py-8">
-        </div>
-        <div class="max-w-sm mx-auto bg-white w-full flex items-center flex-col text-center shadow-lg px-4 lg:overflow-hidden" style="font-family: 'Courgette';" data-aos="zoom-in-up">
-            <svg class="w-full h-[20px] mt-16 mb-8"><use href="assets/img/divider.svg#divider-1"></use></svg>
-            <div class="pt-7">
-                <h2 class="text-xl mb-12">COUNTDOWN</h2>
-                <div class="text-center" id="countdown-block">MAJLIS TELAH BERLANGSUNG</div>
-            </div>
-            <svg class="w-full h-[20px] mt-16 mb-8"><use href="assets/img/divider.svg#divider-1"></use></svg>
-        </div>
-        <div class="max-w-sm mx-auto bg-white w-full flex items-center flex-col text-center shadow-lg px-4 lg:overflow-hidden" style="font-family: 'Courgette';" data-aos="zoom-in-up">
-            <div class="pt-7">
-                <h2 class="text-xl mb-12">GALLERY</h2>
-                <div class="text-center">{gallery}</div>
-            </div>
-            <svg class="w-full h-[20px] mt-16 mb-8"><use href="assets/img/divider.svg#divider-1"></use></svg>
-        </div>
-        <div class="max-w-sm mx-auto bg-white w-full flex items-center flex-col text-center shadow-lg px-4 lg:overflow-hidden" style="font-family: 'Courgette';" data-aos="zoom-in-up">
-            <div class="pt-7">
-                <h2 class="text-xl mb-12">VIDEO</h2>
-                <div class="text-center">{video}</div>
-            </div>
-            <svg class="w-full h-[20px] mt-16 mb-8"><use href="assets/img/divider.svg#divider-1"></use></svg>
-        </div>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script type="module" src="assets/js/main.js"></script>
     </body>
