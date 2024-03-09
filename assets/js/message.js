@@ -1,6 +1,6 @@
 import fire from './fire.js';
 
-const ID = 'aina';
+const ID = 'arif';
 
 let msg_btn = document.getElementById("msg_btn"),
     msg_dialog = document.getElementById("msg_dialog"),
@@ -13,14 +13,6 @@ let msg_btn = document.getElementById("msg_btn"),
     cur_page;
 
 updateMessages();
-
-// msg_list.addEventListener('click', () => {
-//     let width = msg_list.firstElementChild.clientWidth,
-//         new_page = parseInt((cur_page ?? 0) + 1);
-
-//     msg_list.scrollLeft = width * new_page;
-//     cur_page = new_page;
-// });
 
 msg_btn.addEventListener('click', () => { toggleDialog(true); });
 
